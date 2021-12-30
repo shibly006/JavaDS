@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  *
  * @author safia
  */
-public class PriorityQueueTest {
+public class PriorityQueueDefault {
     
     static void queueTest(){
         //add(), peek(), remove(), poll(), size(), isEmpty()
