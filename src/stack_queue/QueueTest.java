@@ -18,7 +18,8 @@ public class QueueTest {
                 
         queue.add(5);
         queue.add(3);
-        queue.add(9);
+        queue.add(9);      
+        
         System.out.println("Front: "+     queue.peek()    +"\tSize: "+    queue.size()    +"\tisEmpty: "+     queue.isEmpty());
         
         queue.remove();

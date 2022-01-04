@@ -34,7 +34,7 @@ public class PriorityQueueObject {
         //add(), peek(), remove(), poll(), size(), isEmpty()
         
         PriorityQueue<Item> queue = new PriorityQueue<Item>(
-                (Item a, Item b)->{
+                (a, b)->{
                     if(a.x!=b.x) return a.x-b.x;
                     if(a.y!=b.y)return a.y-b.y;
                     return a.name.compareTo(b.name);        //a.compareTo(b) -> return a-b                     

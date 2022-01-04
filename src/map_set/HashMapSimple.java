@@ -30,6 +30,12 @@ public class HashMapSimple {
             String key = entry.getKey();
             int value = entry.getValue();    
             System.out.println(key+" -> "+ value);
-        }                
+        }  
+        
+        //Array of HashMap
+        HashMap<Integer,Integer>[]mapArray = new HashMap[10];        
+        for(int i=0;i<mapArray.length;i++){
+            mapArray[i] = new HashMap<>();
+        }
     }
 }

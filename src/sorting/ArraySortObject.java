@@ -34,7 +34,7 @@ public class ArraySortObject {
         list[3] = new Item(0, 0, "b");
         list[4] = new Item(0, 0, "a");
                 
-        Arrays.sort(list, (Item a, Item b)-> {
+        Arrays.sort(list, (a, b)-> {
             if(a.x!=b.x) return a.x - b.x; 
             if(a.y!=b.y) return a.y - b.y;
             

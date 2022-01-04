@@ -16,7 +16,7 @@ import java.util.TreeMap;
  */
 public class TreeMapObject
 {
-    class Item implements Comparable<Item>
+    class Item
     {
         int x;        
         int y;   
@@ -25,17 +25,13 @@ public class TreeMapObject
             this.x = x;
             this.y = y;            
         }
-
-        @Override
-        public int compareTo(Item b) {
-            if(x!=b.x) return x - b.x; 
-            return y - b.y;
-            //Ascending# Swap ->  Return(+ve)
-        }
     };
                 
     void basic(){
-        TreeMap<Item, Integer> bbt = new TreeMap<>();
+        TreeMap<Item, Integer> bbt = new TreeMap<>((a,b)->{
+            if(a.x!=b.x) return b.x - a.x; 
+            return b.y - a.y;
+        });
         ArrayList<Item> list = new ArrayList<>(Arrays.asList(new Item(2, 0), new Item(0, 1), new Item(0, 0),new Item(2, 0), new Item(0, 1)));
         
         for(Item key: list){
@@ -51,7 +47,13 @@ public class TreeMapObject
     }
     
     void searchInMap(){
-        TreeMap<Item, Integer> bbt = new TreeMap<>();
+        System.out.println("+++++++++++++ searchInMap ++++++++++++++");
+        
+        TreeMap<Item, Integer> bbt = new TreeMap<>((a,b)->{
+            if(a.x!=b.x) return a.x - b.x; 
+            return a.y - b.y;
+        });
+        
         ArrayList<Item> list = new ArrayList<>(Arrays.asList(
                 new Item(2, 1), 
                 new Item(0, 1), 
